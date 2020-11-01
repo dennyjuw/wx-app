@@ -1,0 +1,27 @@
+header {
+  background-color: #125430;
+
+  img {
+    max-height: 5rem;
+  }
+}
+
+.nav {
+  color: #ffffff;
+  background-color: #178841;
+
+  a {
+    color: #ffffff;
+    display: block;
+    padding: 10px;
+
+    &.nav-active {
+      background-color: #2dad2d;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #16c53c;
+    }
+  }
+}
