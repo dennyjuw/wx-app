@@ -1,1 +1,22 @@
-<p>product-list works!</p>
+<div class="p-20">
+  <h1>Products</h1>
+
+  <div>
+    <wx-product
+      *ngFor="let p of productMock"
+      [attr.product-id]="p.productId"
+      [attr.product-title]="p.productTitle"
+      [attr.short-description]="p.shortDescription"
+      [attr.price]="p.price"
+      onAddToShoppingList="addToShoppingList()"
+    ></wx-product>
+<!--
+    <wx-product
+      product-id="bb123"
+      product-title="Colgate Total Toothpaste 200g"
+      short-description="Reduces bacteria on teeth, tongue, cheeks and gums."
+      price="9.25"
+    ></wx-product> -->
+  </div>
+
+</div>
