@@ -9,6 +9,7 @@ import { productMock } from '../../mock/product';
 export class ShoppingListComponent implements OnInit {
   productMock = productMock;
   shoppingList;
+  shoppingListTotal;
 
   @HostListener('removeFromShoppingList', ['$event'])
   removeFromShoppingList(e) {
@@ -39,6 +40,7 @@ export class ShoppingListComponent implements OnInit {
         shoppingListAmount: item.amount
       };
     });
+    this.shoppingListTotal = this.shoppingList.map(item => item.price * item.shoppingListAmount).reduce((a, b) => a + b, 0)
   }
 
 }

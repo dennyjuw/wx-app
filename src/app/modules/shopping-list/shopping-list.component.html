@@ -13,6 +13,11 @@
       onAddToShoppingList="addToShoppingList()"
     ></wx-product>
 
+    <div *ngIf="shoppingList" class="d-flex justify-content-between py-20 font-weight-bold">
+      <div>Total</div>
+      <div>${{ shoppingListTotal }}</div>
+    </div>
+
     <div *ngIf="!shoppingList" class="p-20 mt-20 bg-light">
       Shopping list is empty
     </div>
