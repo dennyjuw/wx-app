@@ -40,7 +40,9 @@ export class ShoppingListComponent implements OnInit {
         shoppingListAmount: item.amount
       };
     });
-    this.shoppingListTotal = this.shoppingList.map(item => item.price * item.shoppingListAmount).reduce((a, b) => a + b, 0)
+    this.shoppingListTotal = !this.shoppingList
+      ? 0
+      : this.shoppingList.map(item => item.price * item.shoppingListAmount).reduce((a, b) => a + b, 0);
   }
 
 }
